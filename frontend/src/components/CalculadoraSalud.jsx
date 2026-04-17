@@ -6,7 +6,7 @@ const Salud = () => {
   const [loading, setLoading] = useState(false)
 
   // URL de tu backend (cámbiala por la de Render cuando despliegues)
-  const API_URL = "http://localhost:3001/api/salud"
+  const API_URL = "https://imc-app-3ona.onrender.com/api/salud";
 
   const handleCalcular = async (e) => {
     e.preventDefault()
