@@ -26,14 +26,16 @@ const Salud = () => {
 
       // 2. Obtener Recomendaciones de la IA (Gemini)
       const resAi = await fetch(`${API_URL}/recomendaciones`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          imc: dataImc.imc, 
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+          imc: dataImc.imc,       // El IMC que acabas de calcular
+          peso: datos.peso,      // El peso que el backend espera para el prompt
+          estatura: datos.estatura, // La estatura para el prompt
           objetivo: datos.objetivo 
-        })
       })
-      const dataAi = await resAi.json()
+})
+const dataAi = await resAi.json()
 
       setResultado({ ...dataImc, ...dataAi })
     } catch (error) {
