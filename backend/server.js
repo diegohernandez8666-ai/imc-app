@@ -7,7 +7,7 @@ const app = express()
 
 // Configuración de Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
-const model = genAI.getGenerativeModel({ model: "gemini-pro" }) // Modelo rápido y gratuito
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }) // Modelo rápido y gratuito (cambiar por el que quieras)
 
 app.use(cors())
 app.use(express.json())
