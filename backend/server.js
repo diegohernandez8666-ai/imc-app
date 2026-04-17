@@ -12,7 +12,7 @@ if (!process.env.GEMINI_API_KEY) {
   console.error("❌ ERROR: La API Key no se está leyendo de Render!");
 }
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
+const genAI = new GoogleGenerativeAI("AIzaSyCfcv9JUygJ5JkWPCc_x0e59cwn8dcS3BU")
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
 
 app.use(cors())
