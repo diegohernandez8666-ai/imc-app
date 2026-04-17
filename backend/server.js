@@ -1,13 +1,19 @@
 import express from 'express'
 import cors from 'cors'
-import 'dotenv/config'
-import { GoogleGenerativeAI } from '@google/generative-ai' // Cambio aquí
+import dotenv from 'dotenv'
+import { GoogleGenerativeAI } from '@google/generative-ai'
+
+dotenv.config() // Aseguramos que se carguen las variables
 
 const app = express()
 
-// Configuración de Gemini
+// VERIFICACIÓN CRUCIAL:
+if (!process.env.GEMINI_API_KEY) {
+  console.error("❌ ERROR: La API Key no se está leyendo de Render!");
+}
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }) // Modelo rápido y gratuito (cambiar por el que quieras)
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
 
 app.use(cors())
 app.use(express.json())
@@ -42,5 +48,5 @@ app.post('/api/salud/recomendaciones', async (req, res) => {
   }
 })
 
-const PORT = process.env.PORT || 3001
-app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`))
+const PORT = process.env.PORT || 10000; // Render usa el 10000 por defecto
+app.listen(PORT, '0.0.0.0', () => console.log(`Servidor activo en puerto ${PORT}`));
