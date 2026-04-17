@@ -1,27 +1,27 @@
-# 📄 Reporte del Proyecto IMC App
+#  Reporte del Proyecto IMC App
 
-## 📌 Introducción
+##  Introducción
 
 El presente proyecto consiste en el desarrollo de una aplicación web que permite calcular el Índice de Masa Corporal (IMC) de un usuario, así como gestionar un sistema básico de autenticación.
 
 ---
 
-## 🎯 Objetivo
+##  Objetivo
 
 Desarrollar una aplicación funcional que integre frontend y backend para el cálculo del IMC y futura recomendación de ejercicios.
 
 ---
 
-## 🛠️ Desarrollo
+##  Desarrollo
 
-### 🔹 Frontend
+###  Frontend
 
 Se utilizó React para crear la interfaz de usuario, incluyendo:
 
 * Pantalla de login
 * Formulario para ingresar peso y estatura
 
-### 🔹 Backend
+###  Backend
 
 Se implementó un servidor con Node.js y Express:
 
@@ -31,13 +31,13 @@ Se implementó un servidor con Node.js y Express:
 
 ---
 
-## 🔗 Integración
+##  Integración
 
 Se utilizó Axios para la comunicación entre frontend y backend mediante peticiones HTTP.
 
 ---
 
-## ✅ Resultados
+##  Resultados
 
 * Se logró implementar un sistema funcional de login
 * Se estableció comunicación entre cliente y servidor
@@ -45,7 +45,7 @@ Se utilizó Axios para la comunicación entre frontend y backend mediante petici
 
 ---
 
-## ⚠️ Limitaciones
+##  Limitaciones
 
 * No se implementó base de datos
 * El sistema de autenticación es básico
@@ -53,7 +53,7 @@ Se utilizó Axios para la comunicación entre frontend y backend mediante petici
 
 ---
 
-## 🚀 Trabajo futuro
+##  Trabajo futuro
 
 * Integración con base de datos (MongoDB o MySQL)
 * Implementación de JWT para autenticación
@@ -63,6 +63,6 @@ Se utilizó Axios para la comunicación entre frontend y backend mediante petici
 
 ---
 
-## 📌 Conclusión
+##  Conclusión
 
 El proyecto cumple con los objetivos iniciales al demostrar la integración entre frontend y backend, dejando una base sólida para futuras mejoras.
